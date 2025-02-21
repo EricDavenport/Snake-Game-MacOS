@@ -1,5 +1,5 @@
 struct Snake {
-    var body: [x: Int, y: Int] = [(x: 10, y: 10)]
+    var body: [(x: Int, y: Int)] = [(x: 10, y: 10)]
     var direction: (x: Int, y: Int) = (x: 1, y: 0)
 
     mutating func move() {
@@ -12,4 +12,10 @@ struct Snake {
         let tail = body.last!
         body.append(tail)
     }
+
+    func head() -> (x: Int, y: Int) {
+        return body[0]
+    }
+
+
 }
