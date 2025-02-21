@@ -15,4 +15,13 @@ class RestartButton: SKLabelNode {
     required init(coder aDecoder: NSCoder) {
         fatalError("Init(coder:) has not been implemented")
     }
+
+    override func mouseDown(with event: NSEvent) {
+        fontColor = .red
+    }
+
+    override func mouseUp(with event: NSEvent) {
+        fontColor = .blue
+        action?()
+    }
 }
