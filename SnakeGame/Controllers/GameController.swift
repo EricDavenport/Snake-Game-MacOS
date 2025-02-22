@@ -1,4 +1,3 @@
-// GameController.swift
 import Foundation
 
 class GameController {
